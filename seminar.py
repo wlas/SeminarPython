@@ -39,15 +39,29 @@
 # print(d)
 
 
-print('5. Дано число. Проверить кратно ли оно 5 и 10 или 15 но не 30:')
+# print('5. Дано число. Проверить кратно ли оно 5 и 10 или 15 но не 30:')
 
-def is_multiple(x,y):
-    if x!=0 and (y%x)==0 :
-       print(f"{y} кратное {x}")
-    else:
-       print(f"{y} не кратное {x}")
+# def is_multiple(x,y):
+#     if x!=0 and (y%x)==0 :
+#        print(f"{y} кратное {x}")
+#     else:
+#        print(f"{y} не кратное {x}")
 
-x = int(input())
-list = [5, 10, 15, 30]
-for l in list:
-    is_multiple(x,l)
+# x = int(input())
+# list = [5, 10, 15, 30]
+# for l in list:
+#     is_multiple(x,l)
+
+
+print('6. Дано число обозначающее день недели. Вывести его название и указать является ли он выходным:')
+
+def getWeekDate(day):
+    days=["Рождение дня недели =)", "Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"]    
+    return days[day]
+
+day = int(input('Укажите день недели цыфрой: '))
+week = getWeekDate(day)
+if(week == "Суббота" or week == "Воскресенье"):
+    print(f'День недели {week} -  выходной')
+else:
+    print(f'День недели {week}')
