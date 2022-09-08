@@ -173,12 +173,21 @@
 
 # 14. Подсчитать сумму цифр в вещественном числе.
 
-number = input("Введите вещественное число: ")
+# number = input("Введите вещественное число: ")
 
-def sum_number(numb):
-    sum = 0
-    for a in numb:
-        sum += int(a)
-    return sum
+# def sum_number(numb):
+#     sum = 0
+#     for a in numb:
+#         sum += int(a)
+#     return sum
 
-print(f"{number} ->", sum_number(number))
+# print(f"{number} ->", sum_number(number))
+
+# 15. Написать программу получающую набор произведений чисел от 1 до N.
+# Пример: пусть N = 4, тогда [ 1, 2, 6, 24 ]
+
+N = int(input("Введите число для набора произведений: "))
+ls = [1]
+for i in range(2, N+1):
+    ls.append(ls[i-2] * i)
+print(f"Результат: {ls}")
