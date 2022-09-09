@@ -230,8 +230,26 @@
 
 # 18. Реализовать алгоритм перемешивания списка. 
 
-import random
-lst = [random.randint(0,10) for i in range(random.randint(5,20))]
-print(f"Список:\n {lst}")
-random.shuffle(lst)
-print(f"Перемешенный:\n{lst}")
+# import random
+# lst = [random.randint(0,10) for i in range(random.randint(5,20))]
+# print(f"Список:\n {lst}")
+# random.shuffle(lst)
+# print(f"Перемешенный:\n{lst}")
+
+
+# 19. Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел.
+
+# -----
+
+
+# 20. Определить, присутствует ли в заданном списке строк, некоторое число.
+
+lst = int(input("Введите количество строк для создания списка: "))
+lst2 = [input(f"Введие {i+1} строку: ") for i in range(lst)]
+numb = input("Введите число для поиска: ")
+rez = False
+for i in lst2:
+    if numb in i:
+        rez = True
+        break
+print("Присутствует" if rez else "Отсутсвует")
