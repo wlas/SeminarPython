@@ -140,11 +140,116 @@
 
 # print(f"{number} ->", sum_number(number))
 
+# print('2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N:')
 
-print('2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N:')
+# n = int(input('Введите число N: '))
+# factorial = 1
+# for i in range(1, n+1):
+#     factorial *= i
+#     print(factorial, end=' ')
+################################################################################################################
 
-n = int(input('Введите число N: '))
-factorial = 1
-for i in range(1, n+1):
-    factorial *= i
-    print(factorial, end=' ')
+
+# print('11. Сформировать список из N членов последовательности. Для N = 5: 1, -3, 9, -27, 81 и т.д.:')
+
+# number = int(input("Введите число: "))
+# lst = []
+# for i in range(number):
+#     lst.append((-3)**i)
+# print(f"Результат: {lst}")
+
+# 12. Для натурального n создать словарь индекс-значение, состоящий из элементов последовательности 3n + 1.
+# Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
+
+# numb = int(input("Введите число: "))
+# d = {i : 3*i + 1 for i in range(1, numb + 1)}
+# print(f"Результат: {d}")
+
+# 13. Пользователь задаёт две строки. Определить количество вхождений одной строки в другой.
+
+# str1 = input("Введите первую строку: ")
+# str2 = input("Введите вторую строку: ")
+# print(f"Вторая строка входит в первую {str1.count(str2)} раз(а).")
+
+# 14. Подсчитать сумму цифр в вещественном числе.
+
+# number = input("Введите вещественное число: ")
+
+# def sum_number(numb):
+#     sum = 0
+#     for a in numb:
+#         sum += int(a)
+#     return sum
+
+# print(f"{number} ->", sum_number(number))
+
+# 15. Написать программу получающую набор произведений чисел от 1 до N.
+# Пример: пусть N = 4, тогда [ 1, 2, 6, 24 ]
+
+# N = int(input("Введите число для набора произведений: "))
+# ls = [1]
+# for i in range(2, N+1):
+#     ls.append(ls[i-2] * i)
+# print(f"Результат: {ls}")
+
+# 16. Задать список из n чисел последовательности (1+1/n)^n и вывести на экран их сумму
+
+# n = int(input("Введите число n: "))
+# s = 0
+# for i in range(1,n+1):
+#     s += (1+1/i)**i
+# print(f"Результат: {round(s,2)}")
+
+# 17. Задать список из N элементов, заполненных числами из [-N, N]. 
+# Найти произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+
+# import random
+# def write_file(number):
+#     with open('file.txt', 'w') as data:
+#         for i in range(number):
+#             data.write(f"{random.randrange(0, 2*number)}\n")
+
+
+# def read_file():
+#     with open('file.txt', 'r') as data:
+#         indexs = list(map(int,data.readlines()))
+#     return indexs
+
+# N = int(input("Введите число N: "))
+# lst_number = [i for i in range(-N, N+1)]
+
+# write_file(N)
+# lst_index = read_file()
+
+# prod = 1
+# for i in range(len(lst_index)):
+#     prod *= lst_number[lst_index[i]]
+
+# print(f"Результат: {prod}")
+
+
+# 18. Реализовать алгоритм перемешивания списка. 
+
+# import random
+# lst = [random.randint(0,10) for i in range(random.randint(5,20))]
+# print(f"Список:\n {lst}")
+# random.shuffle(lst)
+# print(f"Перемешенный:\n{lst}")
+
+
+# 19. Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел.
+
+# -----
+
+
+# 20. Определить, присутствует ли в заданном списке строк, некоторое число.
+
+# lst = int(input("Введите количество строк для создания списка: "))
+# lst2 = [input(f"Введие {i+1} строку: ") for i in range(lst)]
+# numb = input("Введите число для поиска: ")
+# rez = False
+# for i in lst2:
+#     if numb in i:
+#         rez = True
+#         break
+# print("Присутствует" if rez else "Отсутсвует")
